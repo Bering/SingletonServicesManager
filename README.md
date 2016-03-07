@@ -5,12 +5,15 @@ Allows global access to a single instance of any class.
 Based on Eliot Lash's at https://www.packtpub.com/books/content/one-liner-singletons-unity
 
 ## Description
-It's a Singleton class holding a dictionary of Object instances. It says "Service" but it's anything inheriting the Object() class really.
+It's a Singleton class holding a dictionary of Object instances.
+
+It says "Service" but it's anything inheriting the Object() class really.
 
 ## Registering a service
 Register an object (usually in the object's Awake())
 
     Services.Register<GameManager>(this);
+
 
     Services.Register<Player>(new Player());
 
@@ -18,6 +21,7 @@ Register an object (usually in the object's Awake())
 Simple, as long as you don't do it in Awake():
 
     Services.Find<GameManager>().StartGame();
+
 
     Services.Find<Player>().RespawnAtRandomSpawnPoint();
 
